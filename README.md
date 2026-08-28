@@ -27,7 +27,7 @@ resuming a crawl.
 ## Install
 
 ```bash
-pip install git+https://github.com/mory-dev/hexdigest-crawl-sharding.git
+pip install git+https://github.com/mory-dev/hexdigest-crawl-sharding.git@v0.1.0
 ```
 
 ## Stable shard assignment
