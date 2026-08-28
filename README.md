@@ -1,8 +1,7 @@
 # HexDigest Crawl Sharding
 
 [![CI](https://github.com/mory-dev/hexdigest-crawl-sharding/actions/workflows/ci.yml/badge.svg)](https://github.com/mory-dev/hexdigest-crawl-sharding/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/hexdigest-crawl-sharding)](https://pypi.org/project/hexdigest-crawl-sharding/)
-[![Python](https://img.shields.io/pypi/pyversions/hexdigest-crawl-sharding)](https://pypi.org/project/hexdigest-crawl-sharding/)
+[![Python](https://img.shields.io/badge/python-3.11%2B-3776ab)](https://www.python.org/)
 [![License](https://img.shields.io/github/license/mory-dev/hexdigest-crawl-sharding)](LICENSE)
 
 Stable work sharding, lease-aware SQLite state, and safe multi-worker launches
@@ -28,7 +27,7 @@ resuming a crawl.
 ## Install
 
 ```bash
-pip install hexdigest-crawl-sharding
+pip install git+https://github.com/mory-dev/hexdigest-crawl-sharding.git
 ```
 
 ## Stable shard assignment
