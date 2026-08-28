@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexdigest-crawl-sharding"
+version = "0.1.0"
+description = "Stable work sharding, lease-aware SQLite state, and safe multi-worker launches for crawlers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Dario Mory", email = "dario@mory.dev" }]
+keywords = [
+  "scrapy", "web scraping", "crawler", "sharding", "distributed crawling",
+  "parallel crawling", "sqlite", "worker orchestration", "crawl queue"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8,<9",
+  "ruff>=0.8,<1",
+  "build>=1.2,<2",
+  "twine>=6,<7",
+]
+
+[project.scripts]
+hexdigest-shard = "hexdigest_crawl_sharding.cli:main"
+
+[project.urls]
+Homepage = "https://hexdigest.com/"
+Documentation = "https://hexdigest.com/open-source/crawl-sharding/"
+Repository = "https://github.com/mory-dev/hexdigest-crawl-sharding"
+Issues = "https://github.com/mory-dev/hexdigest-crawl-sharding/issues"
+Changelog = "https://github.com/mory-dev/hexdigest-crawl-sharding/releases"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible sharding or worker-launch problem
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove proxy credentials, cookies, private URLs, and customer data.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: hexdigest-crawl-sharding 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include a minimal local SQLite or subprocess reproduction.
+    validations:
+      required: true
